@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Függvények gyakorlása</title>
+</head>
+<body>
+
+<h1>Függvények gyakorlása</h1>
+
+<script>
+// Függvény deklaráció és hívás
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+greet("Anna");
+
+// Paraméterek és visszatérési értékek
+function add(a, b);
+    return a + b;
+}
+let sum = add(3, 4);
+console.log(sum); // Eredmény: 7
+
+// Gyakorló feladatok
+// 1. Két szám közötti távolság kiszámítása
+function distance(x, y) {
+    return Math.abs(x - y);
+}
+
+// 2. Szöveges paraméter hosszának visszaadása
+function stringLength(str) {
+    return str.length;
+}
+
+// 3. Legnagyobb elem kiválasztása egy tömbből
+function getMax(arr) {
+    return Math.max(...arr);
+}
+
+// Gyakorló feladatok megoldásainak tesztelése
+console.log(distance(5, 10)); // Eredmény: 5
+console.log(stringLength("Hello")); // Eredmény: 5
+console.log(getMax([1, 2, 3, 4, 5])); // Eredmény: 5
+
+</script>
+
+</body>
+</html>
