@@ -1,0 +1,57 @@
+// Conditional statements
+if (condition) {
+    // Kód, ami akkor fut le, ha a condition igaz.
+} else if (anotherCondition) {
+    // Kód, ami akkor fut le, ha az anotherCondition igaz és az előző condition hamis.
+} else {
+    // Kód, ami akkor fut le, ha az összes korábbi condition hamis.
+}
+
+switch (value) {
+    case "firstValue":
+        // Kód, ami akkor fut le, ha a value "firstValue".
+        break;
+    case "secondValue":
+        // Kód, ami akkor fut le, ha a value "secondValue".
+        break;
+    default:
+        // Kód, ami akkor fut le, ha a value egyik felsorolt érték sem.
+        break;
+}
+
+// Loops
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+let j = 0;
+while (j < 5) {
+    console.log(j);
+    j++;
+}
+
+let k = 0;
+do {
+    console.log(k);
+    k++;
+} while (k < 5);
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(num => {
+    console.log(num * 2);
+});
+
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers);
+
+// Functions
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+greet("Anna");
+
+function add(a, b) {
+    return a + b;
+}
+let sum = add(3, 4);
+console.log(sum);
