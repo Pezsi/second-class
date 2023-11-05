@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Objektumok Kezelése JavaScript-ben</title>
+<script>
+  // Objektum létrehozása ES6 szintaxissal
+  let auto = {
+    szin: 'piros',
+    tipus: 'sedan',
+    uzemanyag: 50, // Üzemanyag mennyiség literben
+    beindit: () => {
+      console.log('A motor beindult.');
+    },
+    fogyaszt: () => {
+      auto.uzemanyag--;
+      console.log('Maradék üzemanyag: ' + auto.uzemanyag + ' liter');
+    }
+  };
+
+  // Több objektum létrehozása
+  let telefon = {
+    marka: 'Xiaomi',
+    modell: 'Note 8',
+    memória: '64GB',
+    hív: (szam) => {
+      console.log('Hívás kezdeményezése a számra: ' + szam);
+    }
+  };
+
+  let diak = {
+    nev: 'Kovács Anna',
+    kor: 23,
+    tanul: () => {
+      console.log(diak.nev + ' jelenleg tanul.');
+    }
+  };
+
+  // Tulajdonságok és metódusok használata
+  auto.beindit();
+  auto.fogyaszt();
+  telefon.hív('123-4567');
+  diak.tanul();
+
+  // Objektumok frissítése
+  auto.szin = 'kék'; // Tulajdonság frissítése
+  telefon.memória = '128GB'; // Tulajdonság frissítése
+  diak.kor++; // Kor növelése 1-gyel
+
+  // Új tulajdonságok hozzáadása a már létező objektumhoz
+  auto.tető = 'napfénytető'; // Új tulajdonság hozzáadása
+  telefon.kamera = { // Új, beágyazott objektum hozzáadása
+    felbontas: '48MP',
+    videó: '4K'
+  };
+
+  // Objektumok tulajdonságainak eltávolítása
+  delete auto.uzemanyag; // Tulajdonság eltávolítása
+  delete telefon.modell; // Tulajdonság eltávolítása
+
+  // A fenti műveletek után a böngésző konzoljának megtekintésével ellenőrizhetjük az objektumok állapotát
+
+</script>
+</head>
+<body>
+  <h1>Objektumok Kezelése JavaScript-ben</h1>
+  <!-- Ide kerülhetnek a gyakorlati feladatok leírásai, amelyeket a diákoknak kell megoldaniuk. -->
+</body>
+</html>
