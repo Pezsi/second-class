@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tömbök a JavaScript-ben</title>
+</head>
+<body>
+    <script>
+        // Tömb létrehozása
+        let gyumolcsok = ['alma', 'banán', 'citrom'];
+
+        // Tömb elemeinek kiíratása
+        console.log(gyumolcsok); // ["alma", "banán", "citrom"]
+
+        // Egy elem hozzáfűzése a tömb végéhez
+        gyumolcsok.push('kiwi');
+        
+        // Egy elem eltávolítása a tömb végéről
+        let utolsoGyumolcs = gyumolcsok.pop();
+
+        // Egy elem eltávolítása a tömb elejéről
+        let elsoGyumolcs = gyumolcsok.shift();
+
+        // Egy elem beszúrása a tömb elejére
+        gyumolcsok.unshift('eper');
+
+        // Tömb elemeinek megszámlálása
+        console.log(gyumolcsok.length); // 3
+
+        // Tömb egy adott indexű elemének elérése
+        console.log(gyumolcsok[1]); // banán
+
+        // Tömb elemeinek bejárása és kiíratása
+        for (let i = 0; i < gyumolcsok.length; i++) {
+            console.log(gyumolcsok[i]);
+        }
+
+        // A tömb elemeinek kiíratása forEach segítségével
+        gyumolcsok.forEach(function(gyumolcs, index) {
+            console.log(index + ': ' + gyumolcs);
+        });
+
+        // Tömb elemeinek módosítása
+        gyumolcsok[1] = 'mango';
+
+        // Tömb elemének indexének keresése
+        let bananIndex = gyumolcsok.indexOf('banán'); // ha nincs a tömbben, akkor -1-et ad vissza
+
+        // Tömb másolása
+        let masolatGyumolcsok = gyumolcsok.slice();
+
+        // Tömb elemeinek kiíratása
+        console.log(gyumolcsok); // ["eper", "mango", "citrom"]
+        console.log(masolatGyumolcsok); // ["eper", "mango", "citrom"]
+    </script>
+</body>
+</html>
